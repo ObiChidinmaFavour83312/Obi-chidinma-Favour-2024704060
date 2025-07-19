@@ -1,0 +1,53 @@
+# Grading system using IF and YES
+
+START
+
+FUNCTION calculate_grade(score):
+    IF score IS BETWEEN 70 AND 100 (INCLUSIVE):
+        RETURN "A"
+    ELSE IF score IS BETWEEN 60 AND 69 (INCLUSIVE):
+        RETURN "B"
+    ELSE IF score IS BETWEEN 50 AND 59 (INCLUSIVE):
+        RETURN "C"
+    ELSE IF score IS BETWEEN 45 AND 49 (INCLUSIVE):
+        RETURN "D"
+    ELSE IF score IS BETWEEN 40 AND 44 (INCLUSIVE):
+        RETURN "E"
+    ELSE IF score IS BETWEEN 0 AND 39 (INCLUSIVE):
+        RETURN "F"
+    ELSE:
+        RETURN "Invalid Score"
+
+PROGRAM main:
+    DISPLAY "Enter the student's score: "
+    READ score
+
+    IF score IS A NUMBER:
+        grade = calculate_grade(score)
+        DISPLAY "The grade for the score " + score + " is: " + grade
+    ELSE:
+        DISPLAY "Invalid input. Please enter a numerical score."
+
+END
+
+PYTHON TRANSLATION 
+
+
+score = int(input("Enter your score: "))
+
+if 70 <= score <= 100:
+    grade = 'A'
+elif 60 <= score <= 69:
+    grade = 'B'
+elif 50 <= score <= 59:
+    grade = 'C'
+elif 45 <= score <= 49:
+    grade = 'D'
+elif 40 <= score <= 44:
+    grade = 'E'
+elif 0 <= score < 40:
+    grade = 'F'
+else:
+    grade = 'Invalid score'
+
+print("Your grade is:", grade)
